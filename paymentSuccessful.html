@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/cart.svg" type="image/x-icon">
+    <title>The Smart Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="/manifest.json">
+
+    <link rel="apple-touch-icon" href="image\icons\ic_launcher_round-96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+
+<body>
+    <div style="margin: 25px;">
+        <div class="basket-module " style=" width: 100%; " >
+            <h1 style="margin-bottom: 0px;">Smart Cart </h1>
+            <div>
+                <h1 style="margin-bottom: 0px;"><strong>Cart Number : 3550 </strong></h1>
+            </div>
+        </div>
+        <div style="width: 100%;">
+            <button onclick="returnFunction()" class="returnToQr">Shop Now</button>
+        </div>
+        <div style="text-align: center; width: 100%; margin-left: 20pt;  ">
+            <img src="image/success_img.png" alt="Payment Successful image" style="width: 340px; height: 340px; padding-top: 25px;">
+            <h1>Payment Success</h1>
+        </div>
+    </div>
+    <script>
+        function returnFunction() {
+            location.href = "index.html";
+        }
+    </script>
+</body>
+
+</html>

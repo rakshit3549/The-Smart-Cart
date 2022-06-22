@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="image/cart.svg" type="image/x-icon">
+  <title>The Smart Cart</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script> 
+  <link rel="manifest" href="/manifest.json">
+
+  <link rel="apple-touch-icon" href="image\icons\ic_launcher_round-96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+
+</head>
+
+<body>
+  <main>
+    <div class="basket">
+      <h2>Smart Cart </h2>
+      <div class="basket-module">
+        <h6><strong>Cart Number : 3550 </strong></h6>
+      </div>
+
+      <div id="basket-empty">
+        <h2 style="margin-top: 5rem;">Cart is Empty</h2>
+        <img class="empty-cart-image" src="image/emptyCart.png" alt="Empty cart Image">
+      </div>
+
+      <div class="basket-labels">
+        <ul>
+          <li class="item item-heading">Item</li>
+          <li class="price">Price</li>
+          <li class="quantity">Quantity</li>
+          <li class="subtotal">Subtotal</li>
+        </ul>
+      </div>
+
+      <div id="items">
+
+      </div>
+
+    </div>
+    <aside>
+      <div class="summary">
+        <div class="summary-total-items"><span class="total-items"></span> Items in your Cart</div>
+        <div class="summary-subtotal">
+          <div class="subtotal-title">Subtotal</div>
+          <div class="subtotal-value final-value" id="basket-subtotal">00.00</div>
+        </div>
+
+        <div class="summary-subtotal">
+
+          <label for="promo-code">Enter a promotional code</label>
+          <input id="promo-code" type="text" name="promo-code" maxlength="11" class="promo-code-field">
+          <button id="promo-btn" class="promo-code-cta text-right">Apply</button>
+
+        </div>
+
+        <!-- Invalid Promotional Code Alert -->
+        <div id="invalidAlert" style="display: none;" class="alert alert-light alert-dismissible fade in show "
+          role="alert">
+          <strong> Invalid </strong> Promotional Code
+          <button id="invalidAlertBtn" type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <!-- Valid Promotional Code Alert -->
+        <div id="validAlert" style="display: none;" class="alert alert-light alert-dismissible fade in show "
+          role="alert">
+          Promotional Code has been <strong> Applied </strong> 
+          <button id="validAlertBtn" type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+
+        <div class="summary-delivery">
+        </div>
+        <div class="summary-total">
+          <div class="total-title">Total</div>
+          <div class="total-value final-value" id="basket-total">00.00</div>
+        </div>
+      </div>
+    </aside>
+  </main>
+  <script type="module" src="js/cart.js"></script>
+</body>
+
+</html>

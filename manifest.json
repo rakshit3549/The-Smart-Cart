@@ -1,0 +1,53 @@
+{
+    "name":"The Smart Cart",
+    "short_name":"Smart Cart",
+    "start_url":"/index.html",
+    "display":"standalone",
+    "background_color":"#000000",
+    "theme_color":"#5d078f",
+    "orientation":"landscape-primary",
+    "icons":[
+        {
+            "src":"/image/icons/maskable_icon_x48.png",
+            "type":"image/png",
+            "size":"48x48",
+            "purpose":"any"
+        },
+        {
+            "src":"/image/icons/maskable_icon_x72.png",
+            "type":"image/png",
+            "size":"72x72",
+            "purpose":"any"
+        },
+        {
+            "src":"/image/icons/maskable_icon_x96.png",
+            "type":"image/png",
+            "size":"96x96",
+            "purpose":"any"
+        },
+        {
+            "src":"/image/icons/maskable_icon_x128.png",
+            "type":"image/png",
+            "size":"128x128",
+            "purpose":"any"
+        },
+        {
+            "src":"/image/icons/maskable_icon_x192.png",
+            "type":"image/png",
+            "size":"192x192",
+            "purpose":"any maskable"
+        },
+        {
+            "src":"/image/icons/maskable_icon_x384.png",
+            "type":"image/png",
+            "size":"384x384",
+            "purpose":"any"
+        },
+        {
+            "src":"/image/icons/maskable_icon_x512.png",
+            "type":"image/png",
+            "size":"512x512",
+            "purpose":"any "
+        }
+    ]
+}
